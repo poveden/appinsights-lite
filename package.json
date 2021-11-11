@@ -1,0 +1,47 @@
+{
+  "name": "appinsights-lite",
+  "version": "1.0.0",
+  "description": "A minimal implementation of the Application Insights JavaScript SDK for restricted web browser environments.",
+  "keywords": [
+    "application insights",
+    "beacon",
+    "monitoring",
+    "telemetry",
+    "microsoft",
+    "azure"
+  ],
+  "repository": "https://github.com/poveden/appinsights-lite",
+  "author": "Jorge Poveda Coma <jorgepoveda@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^16",
+    "yarn": "^1.22.5"
+  },
+  "scripts": {
+    "prebuild": "yarn build:clean",
+    "build": "yarn build:js && yarn build:ts.d",
+    "build:js": "node ./scripts/build.js",
+    "build:ts.d": "tsc -p tsconfig.build.json",
+    "build:clean": "rimraf dist",
+    "prelint": "tsc",
+    "lint": "eslint .",
+    "pretest": "yarn test:clean && yarn lint",
+    "test": "yarn jest",
+    "test:clean": "rimraf TestResults"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "esbuild": "^0.13.13",
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-jsdoc": "^37.0.3",
+    "jest": "^27.3.1",
+    "jest-junit": "^13.0.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  }
+}

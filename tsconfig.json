@@ -1,0 +1,26 @@
+{
+  "include": [
+    "jest.config.js",
+    "src",
+    "test"
+  ],
+  "exclude": [
+    "scripts"
+  ],
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}

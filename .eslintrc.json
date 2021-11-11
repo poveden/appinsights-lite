@@ -1,0 +1,43 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint", "import", "jest", "jsdoc"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:jsdoc/recommended",
+    "plugin:jest/recommended"
+  ],
+  "rules": {
+    "curly": "warn",
+    "eqeqeq": "warn",
+    "semi": "warn",
+    "jsdoc/require-jsdoc": [
+      "warn",
+      {
+        "publicOnly": true
+      }
+    ],
+    "jsdoc/check-tag-names": [
+      "warn",
+      {
+        "definedTags": [
+          "internal"
+        ]
+      }
+    ]
+  }
+}
